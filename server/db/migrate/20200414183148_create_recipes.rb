@@ -1,7 +1,6 @@
 class CreateRecipes < ActiveRecord::Migration[6.0]
   def change
     create_table :recipes do |t|
-      t.string :id
       t.string :name
       t.string :source
       t.integer :preptime
@@ -17,8 +16,8 @@ class CreateRecipes < ActiveRecord::Migration[6.0]
       t.integer :sugar
       t.integer :protein
       t.string :instructions
-      t.array :ingredients
-      t.array :tags
+      t.string :ingredients
+      t.string :tags
 
       t.timestamps
     end
