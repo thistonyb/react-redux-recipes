@@ -4,6 +4,10 @@ import { connect } from "react-redux";
 import { fetchRecipes } from "./actions/RecipeActions";
 
 class RecipeContainer extends Component {
+  componentDidMount() {
+    this.props.fetchRecipes();
+  }
+
   render() {
     return (
       <div>
