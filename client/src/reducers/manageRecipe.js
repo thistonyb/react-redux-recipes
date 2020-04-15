@@ -9,6 +9,14 @@ const manageRecipe = (
         recipes: [...state.recipes],
         loading: true,
       };
+
+    case "ADD_RECIPES":
+      return {
+        ...state,
+        recipes: action.recipes,
+        loading: true,
+      };
+
     //Not sure what recipe id will be named recipeId/recipe_id
     case "ADD_REVIEW":
       const review = {
