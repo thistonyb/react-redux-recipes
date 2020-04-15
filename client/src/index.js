@@ -8,7 +8,7 @@ import { createStore } from redux;
 //import * as serviceWorker from './serviceWorker';
 
 const store = createStore(manageRecipe)
-
+//Use Provider to provide store to top level 
 ReactDOM.render(
   <Provider store={store}>
     <App />
