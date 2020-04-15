@@ -1,10 +1,16 @@
 import React, { Componet } from "react";
 import { connect } from "react-redux";
 import { addReview, deleteReview } from "../actions/ReviewActions";
+import ReviewInput from "../components/reviews/ReviewInput";
+import Reviews from "../components/reviews/Reviews";
 
 class ReviewsContainer extends Component {
   render() {
-    return <div></div>;
+    return;
+    <div>
+      <ReviewInput />
+      <Reviews />
+    </div>;
   }
 }
 
