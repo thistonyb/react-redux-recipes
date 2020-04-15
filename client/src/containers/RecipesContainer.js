@@ -3,7 +3,7 @@ import Recipes from "../components/recipes/Recipes";
 import { connect } from "react-redux";
 import { fetchRecipes } from "./actions/RecipeActions";
 
-class RecipeContainer extends Component {
+class RecipesContainer extends Component {
   componentDidMount() {
     this.props.fetchRecipes();
   }
@@ -29,4 +29,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(RecipeContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(RecipesContainer);

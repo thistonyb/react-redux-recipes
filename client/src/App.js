@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import RecipeContainer from "./containers/RecipeContainer";
+import RecipesContainer from "./containers/RecipesContainer";
 
 export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <RecipeContainer />
+        <RecipesContainer />
       </div>
     );
   }
