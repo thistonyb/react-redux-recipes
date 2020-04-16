@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Recipes from "../components/recipes/Recipes";
+import RecipeInput from "../components/recipes/RecipeInput";
 import { connect } from "react-redux";
 import { fetchRecipes } from "./actions/RecipeActions";
 
@@ -12,6 +13,7 @@ class RecipesContainer extends Component {
     return (
       <div>
         <Recipes recipes={this.props.recipes} />
+        <RecipeInput recipes={this.props.recipes} />
       </div>
     );
   }
