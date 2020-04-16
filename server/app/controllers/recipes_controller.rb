@@ -3,7 +3,15 @@ class RecipesController < ApplicationController
 
     def index
         recipes = Recipe.all
-        render json: meals, only: recipeKeys    
+        render json: recipes, only: recipeKeys    
+    end
+
+    def tag
+        recipes = Recipe.all
+        filteredRecipes = recipes.select do |recipe|
+            recipe[:tags].include? params[:tag]
+        end
+        render json: filteredRecipes, only: recipeKeys  
     end
 
     
