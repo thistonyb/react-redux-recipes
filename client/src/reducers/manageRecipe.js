@@ -14,7 +14,7 @@ const manageRecipe = (
       return {
         ...state,
         recipes: action.recipes,
-        loading: true,
+        loading: false,
       };
 
     //Not sure what recipe id will be named recipeId/recipe_id
