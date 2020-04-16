@@ -5,15 +5,11 @@ import { connect } from "react-redux";
 import { fetchRecipes } from "./actions/RecipeActions";
 
 class RecipesContainer extends Component {
-  componentDidMount() {
-    this.props.fetchRecipes();
-  }
-
   render() {
     return (
       <div>
         <Recipes recipes={this.props.recipes} />
-        <RecipeInput recipes={this.props.recipes} />
+        <RecipeInput fetchRecipes={this.props.fetchRecipes} />
       </div>
     );
   }
@@ -25,9 +21,10 @@ const mapStateToProps = (state) => {
     loading: state.loading,
   };
 };
+
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchRecipes: () => dispatch(fetchRecipes()),
+    fetchRecipes: (tag) => dispatch(fetchRecipes(tag)),
   };
 };
 
