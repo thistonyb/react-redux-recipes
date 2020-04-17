@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Recipes from "../components/recipes/Recipes";
 import RecipeSearch from "../components/recipes/RecipeSearch";
 import { connect } from "react-redux";
-import { fetchRecipes } from "./actions/RecipeActions";
+import { fetchRecipes } from "../actions/RecipeActions";
 
 class RecipesContainer extends Component {
   render() {
