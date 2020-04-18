@@ -1,5 +1,5 @@
 import React from "react";
-import { Navlink, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Home = () => (
   <div className="home">
