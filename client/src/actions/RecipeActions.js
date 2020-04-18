@@ -10,3 +10,16 @@ export const fetchRecipes = (tag) => {
       });
   };
 };
+
+export const fetchRecipe = (recipeId) => {
+  return (dispatch) => {
+    dispatch({ type: "LOADING_RECIPE" });
+    fetch(`http://localhost:3001/recipes/${recipeId}`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((responseJSON) => {
+        dispatch({ type: "ADD_RECIPE", recipe: responseJSON });
+      });
+  };
+};
