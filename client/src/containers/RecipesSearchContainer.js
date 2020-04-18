@@ -4,7 +4,7 @@ import RecipeSearch from "../components/recipes/RecipeSearch";
 import { connect } from "react-redux";
 import { fetchRecipes } from "../actions/RecipeActions";
 
-class RecipesContainer extends Component {
+class RecipesSearchContainer extends Component {
   render() {
     return (
       <div>
@@ -28,4 +28,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(RecipesContainer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(RecipesSearchContainer);
