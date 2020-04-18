@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import RecipeLink from "./RecipeLink";
 
-const Recipes = (props) => {
+const RecipeResults = (props) => {
   const recipes = props.recipes.map((recipe) => (
     <RecipeLink key={recipe.id} recipe={recipe} />
   ));
@@ -9,4 +9,4 @@ const Recipes = (props) => {
   return <ul>{recipes}</ul>;
 };
 
-export default Recipes;
+export default RecipeResults;
