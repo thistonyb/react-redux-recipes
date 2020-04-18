@@ -1,8 +1,9 @@
-import React, { Component } from "react";
-import ReviewsContainer from "../ReviewsContainer";
+import React from "react";
+import ReviewsContainer from "../../containers/ReviewsContainer";
 
 const Recipe = (props) => {
-  <li>{props.recipe.name}</li>;
-  <ReviewsContainer recipe={props.recipe}
+  return null;
+  // <li>{props.recipe.name}</li>
+  // <ReviewsContainer recipe={props.recipe} />
 };
 export default Recipe;
