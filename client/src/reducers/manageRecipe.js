@@ -1,9 +1,10 @@
 const manageRecipe = (
-  state = { recipes: [], loading: false, reviews: [] },
+  state = { loading: false, recipe: null, recipes: [], reviews: [] },
   action
 ) => {
   switch (action.type) {
     case "LOADING_RECIPES":
+    case "LOADING_RECIPE":
       return {
         ...state,
         recipes: [...state.recipes],
@@ -17,7 +18,13 @@ const manageRecipe = (
         loading: false,
       };
 
-    //Not sure what recipe id will be named recipeId/recipe_id
+    case "ADD_RECIPE":
+      return {
+        ...state,
+        recipe: action.recipe,
+        loading: false,
+      };
+
     case "ADD_REVIEW":
       const review = {
         id: action.review.id,
