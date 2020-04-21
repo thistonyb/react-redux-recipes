@@ -3,20 +3,40 @@ import { connect } from "react-redux";
 import { addReview, deleteReview } from "../actions/ReviewActions";
 import ReviewInput from "../components/reviews/ReviewInput";
 import Reviews from "../components/reviews/Reviews";
+import { NavLink } from "react-router-dom";
+import { fetchRecipe } from "../actions/RecipeActions";
 
 class ReviewsContainer extends Component {
+  componentDidMount() {
+    this.props.fetchRecipe(this.props.match.params.recipeId);
+  }
   render() {
+    const recipeId = this.props.match.params.recipeId;
+
     return (
       <div>
-        <ReviewInput />
-        <Reviews />
+        <NavLink to={`/recipes/${recipeId}`}>Back to Recipe</NavLink>
+        <Reviews
+          reviews={this.props.reviews}
+          deleteReview={this.props.deleteReview}
+        />
+        <ReviewInput addReview={this.props.addReview} recipeId={recipeId} />
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => ({ reviews: state.reviews });
+const mapStateToProps = (state) => ({
+  reviews: state.reviews,
+  recipe: state.recipe,
+});
 
-export default connect(mapStateToProps, { addReview, deleteReview })(
-  ReviewsContainer
-);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchRecipe: (recipeId) => dispatch(fetchRecipe(recipeId)),
+    addReview: (comment, recipeId) => dispatch(addReview(comment, recipeId)),
+    deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ReviewsContainer);
