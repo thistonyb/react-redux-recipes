@@ -9,7 +9,8 @@ const Recipe = (props) => {
   return (
     <div className="recipe">
       <h1>{recipe.name}</h1>
-      <NavLink to={`/recipes/${recipe.id}/reviews`}>Reviews</NavLink>
+      <br />
+      <NavLink to={"/recipes"}>Back to Search</NavLink>
       <br />
       <br />
       <span>{`Prep Time: ${recipe.preptime / 60} minutes`}</span>
@@ -41,6 +42,10 @@ const Recipe = (props) => {
       <ul>{ingredients}</ul>
       <h3>Tags:</h3>
       <p>{recipe.tags.split(",").join(", ")}</p>
+      <br />
+      <NavLink to={`/recipes/${recipe.id}/reviews`}>Reviews</NavLink>
+      <br />
+      <br />
     </div>
   );
 };
