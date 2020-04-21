@@ -13,7 +13,7 @@ class ReviewInput extends Component {
 
   handleOnSubmit = (event) => {
     event.preventDefault();
-    this.props.addReview(this.state.comment);
+    this.props.addReview(this.state.comment, this.props.recipeId);
     this.setState({
       comment: "",
     });
@@ -23,14 +23,11 @@ class ReviewInput extends Component {
     return (
       <div>
         <form onSubmit={this.handleOnSubmit}>
-          <input
-            type="text"
-            value={this.state.comment}
-            onChange={this.handleOnChange}
-          />
-          <input typ="submit" />
+          <textarea value={this.state.comment} onChange={this.handleOnChange} />
+          <input type="submit" />
         </form>
       </div>
     );
   }
 }
+export default ReviewInput;
