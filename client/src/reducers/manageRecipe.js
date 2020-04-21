@@ -22,6 +22,7 @@ const manageRecipe = (
       return {
         ...state,
         recipe: action.recipe,
+        reviews: action.recipe.reviews || [],
         loading: false,
       };
 
@@ -29,7 +30,7 @@ const manageRecipe = (
       const review = {
         id: action.review.id,
         comment: action.review.comment,
-        recipeId: action.review.recipeId,
+        recipeId: action.review.recipe_id,
       };
       return { ...state, reviews: [...state.reviews, review] };
 
