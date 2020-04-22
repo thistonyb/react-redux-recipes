@@ -1,0 +1,49 @@
+.recipe {
+  width: 800px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.recipePage {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.recipe ul {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px;
+}
+
+.recipe li {
+  display: block;
+}
+
+.recipe h1 {
+  width: 100%;
+  font-family: fantasy;
+}
+
+.recipe a {
+  width: 100%;
+  font-family: fantasy;
+  font-weight: bold;
+  font-size: large;
+  color: darkred;
+}
+
+.recipe h2 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-family: fantasy;
+}
+
+.recipe h3 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-family: fantasy;
+}

@@ -6,7 +6,7 @@ const RecipeResults = (props) => {
     <RecipeLink key={recipe.id} recipe={recipe} />
   ));
 
-  return <ul>{recipes}</ul>;
+  return <ul style={{ padding: 0 }}>{recipes}</ul>;
 };
 
 export default RecipeResults;

@@ -1,10 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-//import recipe ect..
+import "./RecipeLink.css";
 const RecipeLink = (props) => (
-  <li>
-    <NavLink to={`/recipes/${props.recipe.id}`}>{props.recipe.name}</NavLink>
-    <p>{props.recipe.tags}</p>
+  <li className="recipeListItem">
+    <NavLink className="recipeLink" to={`/recipes/${props.recipe.id}`}>
+      {props.recipe.name}
+    </NavLink>
+    <p className="recipeTags">
+      {props.recipe.tags
+        .split(",")
+        .filter((tag) => tag !== "FUF")
+        .join(", ")}
+    </p>
   </li>
 );
 export default RecipeLink;

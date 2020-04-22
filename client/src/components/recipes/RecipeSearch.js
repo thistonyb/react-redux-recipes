@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./RecipeSearch.css";
 
 class RecipeSearch extends Component {
   state = { tag: "" };
@@ -20,13 +21,14 @@ class RecipeSearch extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleOnSubmit}>
+        <form onSubmit={this.handleOnSubmit} className="recipeSearch">
           <input
             type="text"
             value={this.state.tag}
             onChange={this.handleOnChange}
+            className="textInput"
           />
-          <input type="submit" />
+          <input type="submit" className="submitInput" value="Search" />
         </form>
       </div>
     );

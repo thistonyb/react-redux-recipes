@@ -3,13 +3,18 @@ import RecipeResults from "../components/recipes/RecipeResults";
 import RecipeSearch from "../components/recipes/RecipeSearch";
 import { connect } from "react-redux";
 import { fetchRecipes } from "../actions/RecipeActions";
+import TopBar from "../components/TopBar";
 
 class RecipesSearchContainer extends Component {
   render() {
     return (
       <div>
-        <RecipeResults recipes={this.props.recipes} />
+        <TopBar />
         <RecipeSearch fetchRecipes={this.props.fetchRecipes} />
+        <RecipeResults recipes={this.props.recipes} />
+        {this.props.recipes.length > 5 && (
+          <RecipeSearch fetchRecipes={this.props.fetchRecipes} />
+        )}
       </div>
     );
   }

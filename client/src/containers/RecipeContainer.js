@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchRecipe } from "../actions/RecipeActions";
 import Recipe from "../components/recipes/Recipe";
+import TopBar from "../components/TopBar";
 
 class RecipeContainer extends Component {
   componentDidMount() {
@@ -12,7 +13,12 @@ class RecipeContainer extends Component {
     const recipeId = this.props.match.params.recipeId;
     const recipe = this.props.recipe;
     if (recipe && recipe.id.toString() == recipeId) {
-      return <Recipe recipe={recipe} />;
+      return (
+        <div>
+          <TopBar />
+          <Recipe recipe={recipe} />
+        </div>
+      );
     }
     return null;
   }

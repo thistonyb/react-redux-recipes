@@ -1,0 +1,15 @@
+.reviewInput {
+  margin: 25px;
+  display: inline-grid;
+}
+
+.reviewInput textarea {
+  font-size: x-large;
+  border: 2px solid red;
+  border-radius: 5px;
+}
+
+.reviewInput input {
+  margin-top: 15px;
+  font-size: xx-large;
+}

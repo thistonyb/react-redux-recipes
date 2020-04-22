@@ -5,6 +5,7 @@ import ReviewInput from "../components/reviews/ReviewInput";
 import Reviews from "../components/reviews/Reviews";
 import { NavLink } from "react-router-dom";
 import { fetchRecipe } from "../actions/RecipeActions";
+import TopBar from "../components/TopBar";
 
 class ReviewsContainer extends Component {
   componentDidMount() {
@@ -15,8 +16,10 @@ class ReviewsContainer extends Component {
 
     return (
       <div>
+        <TopBar />
         <NavLink to={`/recipes/${recipeId}`}>Back to Recipe</NavLink>
         <Reviews
+          recipe={this.props.recipe}
           reviews={this.props.reviews}
           deleteReview={this.props.deleteReview}
         />

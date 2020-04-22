@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./ReviewInput.css";
 
 class ReviewInput extends Component {
   state = {
@@ -22,7 +23,7 @@ class ReviewInput extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleOnSubmit}>
+        <form onSubmit={this.handleOnSubmit} className="reviewInput">
           <textarea value={this.state.comment} onChange={this.handleOnChange} />
           <input type="submit" />
         </form>

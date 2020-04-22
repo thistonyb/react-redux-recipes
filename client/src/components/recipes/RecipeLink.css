@@ -1,0 +1,15 @@
+.recipeListItem {
+  display: block;
+}
+
+.recipeLink {
+  font-family: fantasy;
+  font-weight: bold;
+  font-size: xx-large;
+  color: darkred;
+}
+
+.recipeTags {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}

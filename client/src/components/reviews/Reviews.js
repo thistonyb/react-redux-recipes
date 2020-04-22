@@ -1,11 +1,15 @@
 import React from "react";
 import Review from "./Review";
-import { NavLink } from "react-router-dom";
 
 const Reviews = (props) => {
   const { reviews, deleteReview } = props;
   const reviewComponenets = reviews.map((review) => (
-    <Review key={review.id} review={review} deleteReview={deleteReview} />
+    <Review
+      key={review.id}
+      review={review}
+      deleteReview={deleteReview}
+      recipe={props.recipe}
+    />
   ));
   return (
     <div>
