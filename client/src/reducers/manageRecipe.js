@@ -1,5 +1,5 @@
 const manageRecipe = (
-  state = { loading: false, recipe: null, recipes: [], reviews: [] },
+  state = { loading: false, recipe: null, recipes: [] },
   action
 ) => {
   switch (action.type) {
@@ -21,8 +21,7 @@ const manageRecipe = (
     case "ADD_RECIPE":
       return {
         ...state,
-        recipe: action.recipe,
-        reviews: action.recipe.reviews || [],
+        recipe: { ...action.recipe, reviews: action.recipe.reviews || [] },
         loading: false,
       };
 
@@ -32,14 +31,20 @@ const manageRecipe = (
         comment: action.review.comment,
         recipeId: action.review.recipe_id,
       };
-      return { ...state, reviews: [...state.reviews, review] };
+      return {
+        ...state,
+        recipe: { ...state.recipe, reviews: [...state.recipe.reviews, review] },
+      };
 
     case "DELETE_REVIEW":
       return {
         ...state,
-        reviews: state.reviews.filter(
-          (review) => review.id !== action.reviewId
-        ),
+        recipe: {
+          ...state.recipe,
+          reviews: state.recipe.reviews.filter(
+            (review) => review.id !== action.reviewId
+          ),
+        },
       };
 
     default:
