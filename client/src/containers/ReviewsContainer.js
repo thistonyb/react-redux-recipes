@@ -17,7 +17,19 @@ class ReviewsContainer extends Component {
     return (
       <div>
         <TopBar />
-        <NavLink to={`/recipes/${recipeId}`}>Back to Recipe</NavLink>
+        <NavLink
+          style={{
+            "font-family": "fantasy",
+            "font-weight": "bold",
+            "font-size": "large",
+            color: "darkred",
+            paddingTop: "30px",
+            display: "block",
+          }}
+          to={`/recipes/${recipeId}`}
+        >
+          Back to Recipe
+        </NavLink>
         <Reviews
           recipe={this.props.recipe}
           reviews={this.props.reviews}
@@ -30,8 +42,8 @@ class ReviewsContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  reviews: state.reviews,
-  recipe: state.recipe,
+  reviews: state.recipe ? state.recipe.reviews : [],
+  recipe: state.recipe || {},
 });
 
 const mapDispatchToProps = (dispatch) => {

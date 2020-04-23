@@ -11,6 +11,7 @@ const Recipe = (props) => {
     <div className="recipePage">
       <div className="recipe">
         <h1>{recipe.name}</h1>
+        <img alt="treasure chest" src="https://i.imgur.com/ldUxcEN.gif" />
         <br />
         <NavLink to={"/recipes"}>Back to Search</NavLink>
         <br />

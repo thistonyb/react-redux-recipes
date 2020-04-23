@@ -24,7 +24,11 @@ class ReviewInput extends Component {
     return (
       <div>
         <form onSubmit={this.handleOnSubmit} className="reviewInput">
-          <textarea value={this.state.comment} onChange={this.handleOnChange} />
+          <textarea
+            placeholder="Review this Treasure!"
+            value={this.state.comment}
+            onChange={this.handleOnChange}
+          />
           <input type="submit" />
         </form>
       </div>

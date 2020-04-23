@@ -1,5 +1,6 @@
 import React from "react";
 import Review from "./Review";
+import "./Reviews.css";
 
 const Reviews = (props) => {
   const { reviews, deleteReview } = props;
@@ -13,7 +14,8 @@ const Reviews = (props) => {
   ));
   return (
     <div>
-      <ul>{reviewComponenets}</ul>
+      <h4 className="recipeName">{props.recipe.name}</h4>
+      <ul className="reviewList">{reviewComponenets}</ul>
     </div>
   );
 };

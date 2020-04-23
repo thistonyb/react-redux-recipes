@@ -27,6 +27,7 @@ class RecipeSearch extends Component {
             value={this.state.tag}
             onChange={this.handleOnChange}
             className="textInput"
+            placeholder="Search by Keyword"
           />
           <input type="submit" className="submitInput" value="Search" />
         </form>

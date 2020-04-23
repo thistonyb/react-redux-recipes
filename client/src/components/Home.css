@@ -54,6 +54,7 @@
 .home p {
   font-size: x-large;
   font-family: fantasy;
+  margin: 25px 50px;
 }
 
 .searchLink {

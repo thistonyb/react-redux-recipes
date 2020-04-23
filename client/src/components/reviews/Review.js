@@ -1,4 +1,5 @@
 import React from "react";
+import "./Review.css";
 
 const Review = (props) => {
   const { review, recipe } = props;
@@ -8,10 +9,15 @@ const Review = (props) => {
   };
 
   return (
-    <li>
-      <h4>{recipe.name}</h4>
-      <p>{review.comment}</p>
-      <button onClick={handleOnClick}>X</button>
+    <li className="review">
+      <p className="reviewComment">{review.comment}</p>
+      <button
+        className="deleteButton"
+        title="Delete Review"
+        onClick={handleOnClick}
+      >
+        X
+      </button>
     </li>
   );
 };

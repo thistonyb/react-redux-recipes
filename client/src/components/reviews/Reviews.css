@@ -1,0 +1,14 @@
+h4.recipeName {
+  font-family: fantasy;
+  font-size: xx-large;
+}
+
+ul.reviewList {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}

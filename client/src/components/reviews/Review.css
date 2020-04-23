@@ -1,0 +1,29 @@
+/* review, reviewComment deleteButton */
+
+.review {
+  background-color: darkred;
+  color: white;
+  height: 150px;
+  width: 250px;
+  margin: 10px;
+  overflow: auto;
+  position: relative;
+  padding: 5px;
+}
+
+.reviewComment {
+  height: auto;
+  word-wrap: break-word;
+  font-size: x-large;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: large;
+}
