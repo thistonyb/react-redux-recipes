@@ -1,3 +1,8 @@
+/**
+ * This action fetches all the recipes that have a specific keyword.
+ * @param {*} tag Tag or keyword entered by the user to search recipes
+ * by.
+ */
 export const fetchRecipes = (tag) => {
   return (dispatch) => {
     dispatch({ type: "LOADING_RECIPES" });
@@ -10,7 +15,10 @@ export const fetchRecipes = (tag) => {
       });
   };
 };
-
+/**
+ * This action fetches a specific recipe by its id.
+ * @param {*} recipeId Id being used to search for a recipe in the db.
+ */
 export const fetchRecipe = (recipeId) => {
   return (dispatch) => {
     dispatch({ type: "LOADING_RECIPE" });

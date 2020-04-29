@@ -1,3 +1,8 @@
+/**
+ * This action posts of a new review on a recipe.
+ * @param {*} comment A new comment that is provided by the user on a recipe.
+ * @param {*} recipeId The id of the recipe being commented on.
+ */
 export const addReview = (comment, recipeId) => {
   return (dispatch) => {
     let data = { comment: comment, recipe_id: recipeId };
@@ -18,7 +23,10 @@ export const addReview = (comment, recipeId) => {
       });
   };
 };
-
+/**
+ * This action deletes a review on a recipe.
+ * @param {*} reviewId The id of the review to be deleted.
+ */
 export const deleteReview = (reviewId) => {
   return (dispatch) => {
     let configObj = {

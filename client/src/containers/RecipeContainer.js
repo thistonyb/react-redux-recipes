@@ -46,7 +46,7 @@ const mapStateToProps = (state) => {
 };
 /**
  * Assign fetchRecipe key to corresponding action function.
- * @param {*} dispatch Function used to dispatch actions to the store.
+ * @param {*} dispatch Function used to dispatch actions for the store.
  */
 const mapDispatchToProps = (dispatch) => {
   return {

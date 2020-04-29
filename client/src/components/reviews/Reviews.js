@@ -1,7 +1,11 @@
 import React from "react";
 import Review from "./Review";
 import "./Reviews.css";
-
+/**
+ *Functional component that renders a Review for each of the results of
+ the reviews fetch. 
+ * @param {*} props Props passed in from ReviewsContainer
+ */
 const Reviews = (props) => {
   const { reviews, deleteReview } = props;
   const reviewComponenets = reviews.map((review) => (

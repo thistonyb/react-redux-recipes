@@ -66,7 +66,7 @@ const mapStateToProps = (state) => ({
 /**
  * Assign fetchRecipe, addReview, and deleteReview keys to their
  * corresponding action functions for use in props.
- * @param {*} dispatch Function used to dispatch actions to the store.
+ * @param {*} dispatch Function used to dispatch actions for the store.
  */
 const mapDispatchToProps = (dispatch) => {
   return {

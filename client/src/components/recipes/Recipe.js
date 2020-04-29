@@ -1,7 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Recipe.css";
-
+/**
+ * Functional component that renders an individual recipe and a NavLink
+ * back to search and to its Reviews.
+ * @param {*} props Props passed in by RecipeContainer
+ */
 const Recipe = (props) => {
   const { recipe } = props;
   const ingredients = recipe.ingredients
