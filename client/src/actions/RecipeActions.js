@@ -6,7 +6,7 @@ export const fetchRecipes = (tag) => {
         return response.json();
       })
       .then((responseJSON) => {
-        dispatch({ type: "ADD_RECIPES", recipes: responseJSON });
+        dispatch({ type: "FETCH_RECIPES", recipes: responseJSON });
       });
   };
 };
@@ -19,7 +19,7 @@ export const fetchRecipe = (recipeId) => {
         return response.json();
       })
       .then((responseJSON) => {
-        dispatch({ type: "ADD_RECIPE", recipe: responseJSON });
+        dispatch({ type: "FETCH_RECIPE", recipe: responseJSON });
       });
   };
 };

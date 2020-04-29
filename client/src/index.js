@@ -9,7 +9,12 @@ import thunk from "redux-thunk";
 //import * as serviceWorker from './serviceWorker';
 
 const store = createStore(manageRecipe, applyMiddleware(thunk));
-//Use Provider to provide a store with manageRecipe passed in
+/**
+ * Use Provider to provide a store with manageRecipe reducer and
+ * thunk middleware (to incorporate asychronous code in our Redux
+ * actions) passed in.
+ * Renders App component.
+ */
 ReactDOM.render(
   <Provider store={store}>
     <App />

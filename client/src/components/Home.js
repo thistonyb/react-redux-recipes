@@ -1,7 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Home.css";
-
+/**
+ * Presentational component that renders the header, graphics,
+ * introduction paragraph and Navlink to the RecipesRouter component.
+ */
 const Home = () => (
   <div className="home">
     <div className="ginghamHeader">
