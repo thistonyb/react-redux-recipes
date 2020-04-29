@@ -1,3 +1,10 @@
+/**
+ * Processes actions by using a switch statement and makes changes
+ * to the Redux store state's data.
+ * @param {*} state Redux store state
+ * @param {*} action Depicts type for switch case and includes
+ * a payload in the form of an object for a change to state.
+ */
 const manageRecipe = (
   state = { loading: false, recipe: null, recipes: [] },
   action
@@ -11,14 +18,14 @@ const manageRecipe = (
         loading: true,
       };
 
-    case "ADD_RECIPES":
+    case "FETCH_RECIPES":
       return {
         ...state,
         recipes: action.recipes,
         loading: false,
       };
 
-    case "ADD_RECIPE":
+    case "FETCH_RECIPE":
       return {
         ...state,
         recipe: { ...action.recipe, reviews: action.recipe.reviews || [] },
