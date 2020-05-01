@@ -1,3 +1,7 @@
+//Action creator
+// const createRecipes = (responseJSON) => {
+//   return { type: "FETCH_RECIPES", recipes: responseJSON };
+// };
 /**
  * This action fetches all the recipes that have a specific keyword.
  * @param {*} tag Tag or keyword entered by the user to search recipes
