@@ -20,7 +20,7 @@ class RecipeSearch extends Component {
    */
   handleOnSubmit = (event) => {
     event.preventDefault();
-    this.props.fetchRecipes(this.state.tag);
+    this.state.tag.length > 0 && this.props.fetchRecipes(this.state.tag);
     this.setState({
       tag: "",
     });
