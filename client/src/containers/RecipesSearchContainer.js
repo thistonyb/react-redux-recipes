@@ -15,7 +15,10 @@ class RecipesSearchContainer extends Component {
       <div>
         <TopBar />
         <RecipeSearch fetchRecipes={this.props.fetchRecipes} />
-        <RecipeResults recipes={this.props.recipes} />
+        <RecipeResults
+          recipes={this.props.recipes}
+          loading={this.props.loading}
+        />
         {this.props.recipes.length > 5 && (
           <RecipeSearch fetchRecipes={this.props.fetchRecipes} />
         )}

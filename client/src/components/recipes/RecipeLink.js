@@ -17,14 +17,14 @@ class RecipeLink extends Component {
   };
 
   render() {
-    const { props } = this;
+    const { recipe } = this.props;
     return (
       <li className="recipeListItem">
-        <NavLink className="recipeLink" to={`/recipes/${props.recipe.id}`}>
-          {props.recipe.name}
+        <NavLink className="recipeLink" to={`/recipes/${recipe.id}`}>
+          {recipe.name}
         </NavLink>
         <p className="recipeTags">
-          {props.recipe.tags
+          {recipe.tags
             .split(",")
             .filter((tag) => tag !== "FUF")
             .join(", ")}
